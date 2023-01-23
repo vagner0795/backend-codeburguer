@@ -1,13 +1,13 @@
-import express from "express"
+import express from 'express'
+import routes from './routes'
 
-import routes from "./routes"
-
+import './database'
 class App {
   constructor() {
-    this.app = express();
+    this.app = express()
 
-    this.middlewares();
-    this.routes();
+    this.middlewares()
+    this.routes()
   }
 
   middlewares() {
