@@ -7,7 +7,7 @@ import configDatabase from '../config/database'
 const models = [User]
 class Database {
   constructor() {
-    this.init
+    this.init()
   }
 
   init() {
