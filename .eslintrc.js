@@ -3,20 +3,14 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["standard", "prettier"],
-  plugins: ["prettier"],
+  extends: ['standard', 'prettier'],
+  plugins: ['prettier'],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   rules: {
-    camelcase: "off",
-    "prettier/prettier": "error",
+    camelcase: 'off',
+    'prettier/prettier': 'error',
   },
-  "prettier/prettier": [
-    "error",
-    {
-      endOfLine: "auto",
-    },
-  ],
-};
+}
