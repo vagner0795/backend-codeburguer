@@ -5,7 +5,7 @@ import Products from '../apps/models/Products'
 import User from '../apps/models/User'
 import Category from '../apps/models/Category'
 
-import configDatabase from '../config/database'
+// import configDatabase from '../config/database'
 
 const models = [User, Products, Category]
 class Database {
@@ -15,7 +15,9 @@ class Database {
   }
 
   init() {
-    this.connection = new Sequelize(configDatabase)
+    this.connection = new Sequelize(
+      'postgresql://postgres:6icbGsMUdOFET44TLFJU@containers-us-west-180.railway.app:7637/railway'
+    )
     models
       .map((model) => model.init(this.connection))
       .map(
@@ -26,7 +28,7 @@ class Database {
   mongo() {
     mongoose.set('strictQuery', false)
     this.mongoConnection = mongoose.connect(
-      'mongodb://localhost:27017/codeburguer',
+      'mongodb://mongo:CZoKy25A9wG0WfVwnj6F@containers-us-west-58.railway.app:7712',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
